@@ -37,3 +37,29 @@
   top: -5px;
   right: -5px;
 }
+.nav-text {
+  font-size: 24px;
+  color: #29292D;
+  font-weight: 700;
+}
+.nav-text_selected {
+  color: #FF1818;
+}
+.form-search {
+  display: flex;
+}
+.form-search__input {
+  border: none;
+  padding-left: 20px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 100px 0px 0px 100px;
+}
+.form-search__btn {
+  background-color: #29292D;
+  border: none;
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 100px 100px 0px;
+}

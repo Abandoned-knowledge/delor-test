@@ -23,8 +23,7 @@
     <link rel="stylesheet" href="./src/styles/css/main.css" />
   </head>
   <body>
-
-    <header class="container">
+    <header class="container d-flex flex-column gap-2">
       <div class="navbar navbar-expand d-flex justify-content-between">
         <div class="d-flex flex-column gap-2">
           <span class="navbar-text p-0 dark">
@@ -52,8 +51,23 @@
           </a>
         </nav>
       </div>
-    </header>
 
-    
+      <div class="navbar navbar-expand d-flex justify-content-between">
+        <nav class="navbar nav-text gap-3">
+          <a href="#" class="nav-link nav-text_selected">Кроссовки</a>
+          <a href="#" class="nav-link">Одежда</a>
+          <a href="#" class="nav-link">Аксессуары</a>
+          <a href="#" class="nav-link">Блог</a>
+          <a href="#" class="nav-link">Отзывы</a>
+        </nav>
+
+        <form action="#" class="form-search">
+          <input type="text" class="form-search__input" placeholder="Поиск"/>
+          <button class="form-search__btn">
+            <i class="bi bi-search white"></i>
+          </button>
+        </form>
+      </div>
+    </header>
   </body>
 </html>
