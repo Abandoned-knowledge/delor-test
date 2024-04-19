@@ -1,14 +1,14 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
-const less = require("gulp-less");
-const fileinclude = require("gulp-file-include");
 
-gulp.task("less", function () {
-  return gulp
-    .src(["./src/styles/less/**/*.less", "!./src/styles/less/**/_*.less"])
-    .pipe(less({}))
-    .pipe(gulp.dest("./src/styles/css"));
-});
+const paths = {
+  html: {
+    src: "./**/*.html",
+  },
+  less: {
+    src: "./src/less/*.less",
+  },
+};
 
 gulp.task("server", function () {
   browserSync.init({
@@ -19,10 +19,8 @@ gulp.task("server", function () {
 });
 
 gulp.task("watch", function () {
-  gulp.watch("./**/*.html").on("change", browserSync.reload);
-  gulp
-    .watch("./src/styles/less/*.less", gulp.series("less"))
-    .on("change", browserSync.reload);
+  gulp.watch(paths.html.src).on("change", browserSync.reload);
+  gulp.watch(paths.less.src).on("change", browserSync.reload);
 });
 
-gulp.task("default", gulp.parallel("server", "less", "watch"));
+gulp.task("default", gulp.parallel("server", "watch"));

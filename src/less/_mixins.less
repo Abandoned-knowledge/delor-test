@@ -1,0 +1,15 @@
+.mqs(@size, @rules) when (@size = sm) {
+    @media screen and (max-width: 576px) { @rules(); }
+}
+.mqs(@size, @rules) when (@size = md) {
+    @media screen and (max-width: 768px) { @rules(); }
+}
+.mqs(@size, @rules) when (@size = lg) {
+    @media screen and (max-width: 992px) { @rules(); }
+}
+.mqs(@size, @rules) when (@size = xl) {
+    @media screen and (max-width: 1200px) { @rules(); }
+}
+.mqs(@size, @rules) when (@size = xxl) {
+    @media screen and (max-width: 1400px) { @rules(); }
+}
