@@ -13,3 +13,12 @@
 .mqs(@size, @rules) when (@size = xxl) {
     @media screen and (max-width: 1400px) { @rules(); }
 }
+
+@font: "Montserrat", sans-serif;
+
+.text(@size, @weight: 400, @color: @dark) {
+  font-family: @font;
+  font-size: @size;
+  font-weight: @weight;
+  color: @color;
+}
