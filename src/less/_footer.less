@@ -1,0 +1,29 @@
+.footer {
+  background-color: @dark;
+
+  &__logo {
+    height: 175px;
+    width: auto;
+
+    .mqs(md, { height: 150px; });
+    .mqs(sm, { height: 50px; });
+  }
+  &__info {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(2, auto);
+    width: fit-content;
+    align-items: center;
+  }
+
+  &__item:nth-child(1) {
+    grid-row: span 2;
+    .mqs(sm, {grid-row: span 1;});
+  }
+  &__item:nth-child(3) {
+    width: fit-content;
+    height: fit-content;
+    grid-column: span 1;
+    .mqs(sm, {grid-column: span 2;});
+  }
+}
