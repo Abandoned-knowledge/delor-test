@@ -1,0 +1,19 @@
+.custom-btn {
+  border-radius: 100px;
+  padding: 15px 30px;
+  background-color: @red;
+  transition: all 0.2s ease;
+  border: none;
+  width: fit-content;
+
+  &:hover {
+    background-color: @orange;
+  }
+  &:active {
+    background-color: darken(@red, 10);
+  }
+
+  &:disabled {
+    background-color: @lightGrey;
+  }
+}

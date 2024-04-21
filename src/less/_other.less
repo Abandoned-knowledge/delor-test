@@ -1,0 +1,21 @@
+.hero-section {
+  position: relative;
+  height: fit-content;
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  &__rectangle {
+    position: absolute;
+    width: 180%;
+    height: 80%;
+    rotate: -22.5deg;
+    background-color: @blue;
+    border-radius: 9999px;
+    bottom: 25%;
+    left: 0;
+    z-index: -1;
+  }
+}
+

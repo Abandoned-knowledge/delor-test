@@ -20,7 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
   </head>
   <body>
-    <header class="container-md p-md-0 header">
+    
+    <header class="d-none container-md p-md-0 header">
       <!-- header up -->
       <div class="px-3 px-md-0 navbar navbar-expand-md justify-content-md-between flex-row-reverse flex-md-row">
         <section class="d-flex flex-md-column gap-4 gap-md-0 body-text_lg">
@@ -35,7 +36,7 @@
         </section>
 
         <article class="navbar-brand">
-          <img src="./src/assets/logo.svg" alt="logo icon" class="logo-icon" />
+          <img src="./src/assets/icons/logo.svg" alt="logo icon" class="logo-icon" />
         </article>
 
         <nav class="navbar-nav gap-3 d-none d-md-flex">
@@ -110,15 +111,91 @@
       </div>
     </header>
 
-    
+    <div class="container-md px-3">
+     
+      <div class="d-none  my-5 align-items-center ">
+        <div class="col gap-4 d-flex flex-column">
+          <h1 class="h1-text">ADIDAS NITE JOGGER</h1>
+          <h3 class="h3-text">Городские кроссовки в ярком стиле 80-х</h3>
+          <button class="custom-btn nav-text white">Смотреть все</button>
+        </div>
+        
+        <div class="col offset-xl-2 hero-section">
+          <img src="./src/assets/hero-image.png" class="hero-section__image" alt="hero image">
+          <div class="hero-section__rectangle"></div>
+        </div>
+      </div>
 
-    <footer class="footer py-5">
+
+
+
+
+
+
+
+
+      <div class="d-none  row gap-5 my-5 blog">
+        <h2 class="h2-text">Блог</h2>
+        <div class="col d-flex flex-column gap-5 blog">
+          <!-- blog item 1 -->
+          <div class="row shadow rounded-4 overflow-hidden">
+            <div class="col-auto p-0">
+              <img src="./src/assets/shoes.png" class="blog__img" alt="shoes">
+            </div>
+
+            <div class="col d-flex flex-column gap-3 align-self-center ">
+              <p class="nav-text blue">КРОССОВКИ NIKE AIR MAX 270</p>
+              <p class="body-text">Nike Air Max 720 Saturn представлен в совершенно новой цветовой гамме Black / Team Orange.</p>
+              <div class="d-flex justify-content-between">
+                <span class="body-text_sm lightGrey">15 августа 2019</span>
+                <span class="body_text_sm lightGrey"> 
+                  <i class="bi bi-eye-fill"></i> 4 416
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- blog item 2 -->
+          <div class="row shadow rounded-4 overflow-hidden">
+            <div class="col-auto p-0">
+              <img src="./src/assets/shoes2.png" class="blog__img" alt="shoes">
+            </div>
+
+            <div class="col d-flex flex-column gap-3 align-self-center ">
+              <p class="nav-text blue">КРОССОВКИ NIKE AIR MAX 720 SATURN</p>
+              <p class="body-text">Nike Air Max 720 Saturn представлен в совершенно новой цветовой гамме Black / Team Orange.</p>
+              <div class="d-flex justify-content-between">
+                <span class="body-text_sm lightGrey">15 августа 2019</span>
+                <span class="body_text_sm lightGrey"> 
+                  <i class="bi bi-eye-fill"></i> 4 416
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- blog mailing -->
+        <div class="blog-mailing col p-0 shadow">
+          <p class="nav-text white text-center blog-mailing__text">Подпишись на рассылку и получи скидку  до 10 %  </p>
+          <form action="#" class="form-blog">
+            <input type="text" class="form-blog__input nav-text lightGrey" placeholder="Введите ваш email">
+            <section class="blog-mailing__btn">
+              <button type="submit" class="custom-btn nav-text white">Подписаться</button>
+              <a href="#" class="body-text_sm lightGrey">Политика конфиденциальности</a>
+            </section>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="d-none footer py-5">
       <section class="container-md">
         <div class="row justify-content-between gap-3">
 
           <div class="footer__info">
 
-            <img src="./src/assets/logo.svg" alt="" class="footer__item footer__logo"/>
+            <img src="./src/assets/icons/logo.svg" alt="" class="footer__item footer__logo"/>
 
             <section class="footer__item d-flex gap-3 social">
               <img src="./src/assets/icons/social/instagram.svg" alt="instagram icon" class="social__icon"/>
