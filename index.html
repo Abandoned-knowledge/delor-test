@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    
-    <!-- font Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- bootstrap -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-    
-    <!-- less -->
-    <link rel="stylesheet/less" type="text/css" href="./src/less/main.less" />
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
-  </head>
-  <body>
-    
-    <header class="d-none container-md p-md-0 header">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+
+  <!-- font Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- bootstrap -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- less -->
+  <link rel="stylesheet/less" type="text/css" href="./src/less/main.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less"></script>
+
+  <!-- js -->
+  <script type="module" src="./src/js/index.js"></script>
+</head>
+
+<body>
+  <div class="d-flex flex-column justify-content-between gap-5 overflow-hidden">
+    <header class="container-md p-md-0 header">
       <!-- header up -->
       <div class="px-3 px-md-0 navbar navbar-expand-md justify-content-md-between flex-row-reverse flex-md-row">
         <section class="d-flex flex-md-column gap-4 gap-md-0 body-text_lg">
@@ -56,14 +65,15 @@
       </div>
 
       <!-- header down -->
-      <div class="navbar navbar-expand-md justify-content-between">
+      <div class="navbar navbar-expand-md d-flex flex-row flex-md-column flex-lg-row gap-md-3 justify-content-between">
         <!-- burger button -->
-        <button class="navbar-toggler nav-menu nav-text white" type="button" data-bs-target="#headerDownNav" aria-controls="headerDownNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse">
+        <button class="navbar-toggler nav-menu nav-text white" type="button" data-bs-target="#headerDownNav"
+          aria-controls="headerDownNav" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse">
           Меню <i class="bi bi-list nav-menu__icon"></i>
         </button>
 
         <!-- navigation №1 -->
-        <nav class="navbar-nav d-md-none flex-row gap-3">
+        <nav class="navbar-nav d-md-none flex-row gap-1 gap-sm-4">
           <a href="#" class="nav__item nav-link position-relative">
             <div class="bag-count white body-text white">3</div>
             <i class="bi bi-handbag-fill white"></i>
@@ -84,7 +94,65 @@
         <nav class="collapse navbar-collapse" id="headerDownNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#" class="nav-link nav-text">Кроссовки</a>
+              <a href="#" class="nav-link nav-text nav-link__active">Кроссовки</a>
+              <ul class="nav-inner">
+
+                <li class="nav-link nav-text">
+                  <a href="#" class="nav-link nav-text">Детские</a>
+                  <ul class="nav-inner-inner">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Бег</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Баскетбол</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Сапоги</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Ботинки</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-link nav-text">
+                  <a href="#" class="nav-link nav-text">Женские</a>
+                  <ul class="nav-inner-inner">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Бег</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Баскетбол</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Сапоги</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Ботинки</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="nav-link nav-text">
+                  <a href="#" class="nav-link nav-text">Мужские</a>
+                  <ul class="nav-inner-inner">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Бег</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Баскетбол</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Сапоги</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link nav-text_normal">Ботинки</a>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link nav-text">Одежда</a>
@@ -112,43 +180,251 @@
     </header>
 
     <div class="container-md px-3">
-     
-      <div class="d-none  my-5 align-items-center ">
+      <!-- hero section -->
+      <div class="row my-5 align-items-center">
         <div class="col gap-4 d-flex flex-column">
           <h1 class="h1-text">ADIDAS NITE JOGGER</h1>
           <h3 class="h3-text">Городские кроссовки в ярком стиле 80-х</h3>
           <button class="custom-btn nav-text white">Смотреть все</button>
         </div>
-        
+
         <div class="col offset-xl-2 hero-section">
-          <img src="./src/assets/hero-image.png" class="hero-section__image" alt="hero image">
+          <img src="./src/assets/hero-image.png" class="hero-section__image" alt="hero image" />
           <div class="hero-section__rectangle"></div>
         </div>
       </div>
 
+      <!-- items carousel -->
+      <div id="carouselIndicator" class="carousel carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselIndicator" data-bs-slide-to="0"
+            class="carousel__indicatior active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselIndicator" data-bs-slide-to="1" class="carousel__indicatior"
+            aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active px-4">
+            <div class="row gap-4 my-5">
+              <div class="card col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item1.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="card d-none d-md-block col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item2.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="card col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item3.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="card d-none d-md-block col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item4.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item px-4">
+            <div class="row gap-4">
+              <div class="card d-none d-md-block col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item3.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="card d-none d-md-block card_active col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item1.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="card col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item4.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
 
+              <div class="card col p-0 border-0 shadow-sm rounded-5 overflow-hidden">
+                <img src="./src/assets/carousel/item2.png" class="card__image card-img-top" alt="" />
+                <div class="card-body d-flex flex-column gap-2">
+                  <p class="card-title body-text_lg body-text_bold">
+                    СЛАНЦЫ ADIDAS YEEZY SLIDE
+                  </p>
+                  <p class="card-text body-text_sm lightGrey">
+                    Артикул 19666
+                  </p>
+                  <p class="card-text nav-text blue card__price">3290 ₽</p>
+                  <div class="card__size-container row row-cols-3 gap-2">
+                    <span class="card__size card__size_inactive">35 EUR</span>
+                    <span class="card__size">36 EUR</span>
+                    <span class="card__size card__size_selected">37 EUR</span>
+                    <span class="card__size">38 EUR</span>
+                    <span class="card__size card__size_inactive">39 EUR</span>
+                    <span class="card__size">40 EUR</span>
+                    <span class="card__size">41 EUR</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <button class="d-none d-md-block carousel__control carousel__control_prev" type="button"
+          data-bs-target="#carouselIndicator" data-bs-slide="prev">
+          <svg class="carousel__icon" width="29" height="54" viewBox="0 0 29 54" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.01897 24.9137C-0.106623 26.0768 -0.106625 27.9232 1.01897 29.0863L23.8442 52.6723C25.7194 54.61 29 53.2826 29 50.5861L29 3.41393C29 0.717441 25.7194 -0.610037 23.8442 1.32767L1.01897 24.9137Z" />
+          </svg>
+        </button>
 
-      <div class="d-none  row gap-5 my-5 blog">
+        <button class="d-none d-md-block carousel__control carousel__control_next" type="button"
+          data-bs-target="#carouselIndicator" data-bs-slide="next">
+          <svg class="carousel__icon" width="29" height="54" viewBox="0 0 29 54" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M27.981 24.9137C29.1066 26.0768 29.1066 27.9232 27.981 29.0863L5.15581 52.6723C3.28061 54.61 -7.15761e-07 53.2826 -5.97894e-07 50.5861L1.46407e-06 3.41393C1.58193e-06 0.717441 3.28061 -0.610037 5.15581 1.32767L27.981 24.9137Z" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- blogs -->
+      <div class="row gap-5 blog">
         <h2 class="h2-text">Блог</h2>
         <div class="col d-flex flex-column gap-5 blog">
           <!-- blog item 1 -->
           <div class="row shadow rounded-4 overflow-hidden">
             <div class="col-auto p-0">
-              <img src="./src/assets/shoes.png" class="blog__img" alt="shoes">
+              <img src="./src/assets/shoes.png" class="blog__img" alt="shoes" />
             </div>
 
-            <div class="col d-flex flex-column gap-3 align-self-center ">
+            <div class="col d-flex flex-column gap-3 align-self-center">
               <p class="nav-text blue">КРОССОВКИ NIKE AIR MAX 270</p>
-              <p class="body-text">Nike Air Max 720 Saturn представлен в совершенно новой цветовой гамме Black / Team Orange.</p>
+              <p class="body-text">
+                Nike Air Max 720 Saturn представлен в совершенно новой
+                цветовой гамме Black / Team Orange.
+              </p>
               <div class="d-flex justify-content-between">
                 <span class="body-text_sm lightGrey">15 августа 2019</span>
-                <span class="body_text_sm lightGrey"> 
+                <span class="body_text_sm lightGrey">
                   <i class="bi bi-eye-fill"></i> 4 416
                 </span>
               </div>
@@ -158,56 +434,60 @@
           <!-- blog item 2 -->
           <div class="row shadow rounded-4 overflow-hidden">
             <div class="col-auto p-0">
-              <img src="./src/assets/shoes2.png" class="blog__img" alt="shoes">
+              <img src="./src/assets/shoes2.png" class="blog__img" alt="shoes" />
             </div>
 
-            <div class="col d-flex flex-column gap-3 align-self-center ">
+            <div class="col d-flex flex-column gap-3 align-self-center">
               <p class="nav-text blue">КРОССОВКИ NIKE AIR MAX 720 SATURN</p>
-              <p class="body-text">Nike Air Max 720 Saturn представлен в совершенно новой цветовой гамме Black / Team Orange.</p>
+              <p class="body-text">
+                Nike Air Max 720 Saturn представлен в совершенно новой
+                цветовой гамме Black / Team Orange.
+              </p>
               <div class="d-flex justify-content-between">
                 <span class="body-text_sm lightGrey">15 августа 2019</span>
-                <span class="body_text_sm lightGrey"> 
+                <span class="body_text_sm lightGrey">
                   <i class="bi bi-eye-fill"></i> 4 416
                 </span>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- blog mailing -->
         <div class="blog-mailing col p-0 shadow">
-          <p class="nav-text white text-center blog-mailing__text">Подпишись на рассылку и получи скидку  до 10 %  </p>
+          <p class="nav-text white text-center blog-mailing__text">
+            Подпишись на рассылку и получи скидку до 10 %
+          </p>
           <form action="#" class="form-blog">
-            <input type="text" class="form-blog__input nav-text lightGrey" placeholder="Введите ваш email">
+            <input type="text" class="form-blog__input nav-text lightGrey" placeholder="Введите ваш email" />
             <section class="blog-mailing__btn">
-              <button type="submit" class="custom-btn nav-text white">Подписаться</button>
+              <button type="submit" class="custom-btn nav-text white">
+                Подписаться
+              </button>
               <a href="#" class="body-text_sm lightGrey">Политика конфиденциальности</a>
             </section>
           </form>
         </div>
-
       </div>
     </div>
 
-    <footer class="d-none footer py-5">
+    <footer class="footer py-5">
       <section class="container-md">
         <div class="row justify-content-between gap-3">
-
           <div class="footer__info">
-
-            <img src="./src/assets/icons/logo.svg" alt="" class="footer__item footer__logo"/>
+            <img src="./src/assets/icons/logo.svg" alt="" class="footer__item footer__logo" />
 
             <section class="footer__item d-flex gap-3 social">
-              <img src="./src/assets/icons/social/instagram.svg" alt="instagram icon" class="social__icon"/>
-              <img src="./src/assets/icons/social/vk.svg" alt="vk icon" class="social__icon"/>
-              <img src="./src/assets/icons/social/whatsapp.svg" alt="whatsapp icon" class="social__icon"/>
+              <img src="./src/assets/icons/social/instagram.svg" alt="instagram icon" class="social__icon" />
+              <img src="./src/assets/icons/social/vk.svg" alt="vk icon" class="social__icon" />
+              <img src="./src/assets/icons/social/whatsapp.svg" alt="whatsapp icon" class="social__icon" />
             </section>
 
             <section class="footer__item d-flex flex-column gap-2 body-text_lg">
-              <span class="lightGrey" style="width: fit-content;">
+              <span class="lightGrey" style="width: fit-content">
                 <i class="bi bi-telephone-fill"></i> +7 951 999 28 34
               </span>
-              <span class="lightGrey"  style="width: fit-content;">
+              <span class="lightGrey" style="width: fit-content">
                 <i class="bi bi-envelope-fill"></i> info@stageboxbrand.ru
               </span>
             </section>
@@ -235,9 +515,9 @@
               </ul>
             </nav>
           </div>
-  
+
           <!-- search form -->
-          <div class="col-auto d-none d-lg-inline-block ">
+          <div class="col-auto d-none d-lg-inline-block">
             <form action="#" class="form-search form-search_footer">
               <input type="text" class="form-search__input grey" placeholder="Поиск" />
               <button type="submit" class="form-search__btn">
@@ -246,9 +526,9 @@
             </form>
           </div>
         </div>
-
-
       </section>
     </footer>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -1,0 +1,53 @@
+.carousel {
+  &__control {
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+
+    &:hover {
+      .carousel__icon {
+        color: @red;
+      }
+    }
+    &_prev {
+      left: -5%;
+    }
+    &_next {
+      right: -5%;
+    }
+  }
+  &__icon {
+    transition: all 0.2s ease;
+    height: 80%;
+    width: auto;
+    color: @lightGrey;
+  }
+
+  &-inner {
+    height: 600px;
+    .mqs(xxl, {height: 650px;} );
+    .mqs(lg, {height: 500px;} );
+  }
+
+  &-indicators {
+    display: flex;
+    gap: 30px;
+    .active {
+      background-color: @red !important;
+    }
+  }
+
+  &__indicatior {
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 100% !important;
+    background-color: @lightGrey !important;
+  }
+}

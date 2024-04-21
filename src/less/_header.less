@@ -45,3 +45,52 @@
 .nav-search {
   border-radius: 100px 0px 0px 100px;
 }
+
+#headerDownNav {
+  .nav-link__active {
+    color: @red;
+  }
+  & > .navbar-nav > li:hover {
+    .nav-inner {
+      opacity: 100;
+      visibility: visible;
+      height: 100%;
+    }
+  }
+}
+
+.nav-inner {
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  position: absolute;
+  background-color: #fff;
+  z-index: 5;
+  padding: 20px;
+  border-radius: 20px;
+  height: 0;
+  overflow: hidden;
+
+  .mqs(md, {
+    position: relative;
+    padding: 0;
+    flex-direction: column;
+  });
+
+  & > li:hover {
+    .nav-inner-inner {
+      opacity: 100;
+      visibility: visible;
+      height: 100%;
+    }
+  }
+}
+.nav-inner-inner {
+  padding: 0;
+  list-style-type: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
